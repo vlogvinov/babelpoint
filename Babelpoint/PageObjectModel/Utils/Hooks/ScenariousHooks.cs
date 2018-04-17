@@ -8,6 +8,7 @@ using TechTalk.SpecFlow;
 
 namespace PageObjectModel.Utils.Hooks
 {
+    [Binding]
     internal static class ScenariousHooks
     {
         [BeforeScenario]
