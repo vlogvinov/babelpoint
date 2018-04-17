@@ -6,42 +6,14 @@ using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using TechTalk.SpecFlow;
 
 namespace PageObjectModel.Utils.Selenium
 {
+    [Binding]
     internal class Driver
     {
-        internal static DriverController driverController = new DriverController();
-
-        internal IWebDriver WebDriver { get; set; }
-
-
-        internal void StartChrome()
-        {
-            if (WebDriver != null) return;
-            WebDriver = ChromeWebDriver.LoadChromeDriver();
-        }
-
-        internal void StartPhantomJs()
-        {
-            if (WebDriver != null) return;
-            WebDriver = PhantomJsWebDriver.LoadPhantomJsDriver();
-        }
-
-        internal void StopWebDriver()
-        {
-            if (WebDriver == null) return;
-            try
-            {
-                WebDriver.Quit();
-                WebDriver.Dispose();
-            }
-            catch (Exception e)
-            {
-                Debug.WriteLine(e, ":: WebDriver stop error");
-            }
-            WebDriver = null;
-            Console.WriteLine(":: WebDriver stopped");
-        }
+        internal static IWebDriver Browser
+            => DriverController.Instance.WebDriver;
     }
 }
