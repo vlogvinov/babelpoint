@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace PageObjectModel.Utils.Drivers
 {
-    internal static class PhantomJsDriverService
+    internal static class PhantomJsWebDriver
     {
         internal static IWebDriver LoadPhantomJsDriver()
         {
