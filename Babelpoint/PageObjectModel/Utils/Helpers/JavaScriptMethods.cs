@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace PageObjectModel.Utils.Helpers
 {
-    class JavascriptMethods
+    class JavaScriptMethods
     {
     }
 }
