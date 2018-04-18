@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace PageObjectModel.Steps
 {
-    class VoidClickSteps
+    public sealed class VoidClickSteps : BaseSteps
     {
     }
 }
