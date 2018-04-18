@@ -13,7 +13,7 @@ namespace PageObjectModel.Utils.Selenium
     [Binding]
     internal class Driver
     {
-        internal static IWebDriver Browser
+        internal static IWebDriver Browser()
             => DriverController.Instance.WebDriver;
     }
 }
