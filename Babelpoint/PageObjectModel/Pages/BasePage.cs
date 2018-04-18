@@ -15,6 +15,7 @@ namespace PageObjectModel.Pages
     {
         public IWebDriver Driver { get; internal set; }
         public string GetTitle => Driver.Title;
+        public string GetUrl => Driver.Url;
 
         public void AccessMainEnterPoint()
         {
@@ -28,6 +29,13 @@ namespace PageObjectModel.Pages
             var titleToValidate = Driver.Title.Contains(expectedTitle);
             Assert.IsTrue(titleToValidate, ":: This is not the expected title");
             Console.WriteLine(":: the title of the site is " + GetTitle);
+        }
+
+        public void ValidatePageUrl(string expectedUrl)
+        {
+            var urlToValidate = Driver.Url.Contains(expectedUrl);
+            Assert.IsTrue(urlToValidate, ":: This is not the expected Url");
+            Console.WriteLine(":: the Url of the site is " + GetUrl);
         }
 
 

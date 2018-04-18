@@ -24,6 +24,13 @@ namespace PageObjectModel.Steps
             InstanceOf<BasePage>().ValidatePageTitle(expectedTitle);
         }
 
+        [Then(@"I see the page Url contains ""(.*)""")]
+        public void ThenISeeThePageUrlContains(string expectedUrl)
+        {
+            InstanceOf<BasePage>().ValidatePageUrl(expectedUrl);
+        }
+
+
 
     }
 }

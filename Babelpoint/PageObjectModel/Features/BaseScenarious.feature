@@ -2,6 +2,11 @@
 	These scenarious can be used in any project
 
 @Debug
-Scenario: Validate the title of a website
+Scenario: Validate the title of the website
 	Given I navigate to the homepage
 	Then I see the page title contains "Wikipedia"
+
+@Debug
+Scenario: Validate the Url of the website
+	Given I navigate to the homepage
+	Then I see the page Url contains "www.wikipedia.org"

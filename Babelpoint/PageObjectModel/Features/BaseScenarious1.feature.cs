@@ -64,11 +64,11 @@ namespace PageObjectModel.Features
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Validate the title of a website")]
+        [NUnit.Framework.DescriptionAttribute("Validate the title of the website")]
         [NUnit.Framework.CategoryAttribute("Debug")]
-        public virtual void ValidateTheTitleOfAWebsite()
+        public virtual void ValidateTheTitleOfTheWebsite()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Validate the title of a website", new string[] {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Validate the title of the website", new string[] {
                         "Debug"});
 #line 5
 this.ScenarioSetup(scenarioInfo);
@@ -76,6 +76,23 @@ this.ScenarioSetup(scenarioInfo);
  testRunner.Given("I navigate to the homepage", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 7
  testRunner.Then("I see the page title contains \"Wikipedia\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("Validate the Url of the website")]
+        [NUnit.Framework.CategoryAttribute("Debug")]
+        public virtual void ValidateTheUrlOfTheWebsite()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Validate the Url of the website", new string[] {
+                        "Debug"});
+#line 10
+this.ScenarioSetup(scenarioInfo);
+#line 11
+ testRunner.Given("I navigate to the homepage", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 12
+ testRunner.Then("I see the page Url contains \"www.wikipedia.org\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
