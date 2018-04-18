@@ -10,3 +10,8 @@ Scenario: Validate the title of the website
 Scenario: Validate the Url of the website
 	Given I navigate to the homepage
 	Then I see the page Url contains "www.wikipedia.org"
+
+@Debug
+Scenario: Validate the PageSource string on the website
+	Given I navigate to the homepage
+	Then I see "The Free Encyclopedia" in the PageSource

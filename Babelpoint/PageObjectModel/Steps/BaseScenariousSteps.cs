@@ -30,6 +30,13 @@ namespace PageObjectModel.Steps
             InstanceOf<BasePage>().ValidatePageUrl(expectedUrl);
         }
 
+        [Then(@"I see ""(.*)"" in the PageSource")]
+        public void ThenISeeInThePageSource(string expectedText)
+        {
+            InstanceOf<BasePage>().ValidateTextInPageSource(expectedText);
+        }
+
+
 
 
     }
