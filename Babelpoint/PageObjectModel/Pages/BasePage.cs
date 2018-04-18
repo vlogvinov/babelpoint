@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using PageObjectModel.Utils.Selenium;
 using NUnit.Framework;
+using TechTalk.SpecFlow;
 
 namespace PageObjectModel.Pages
 {
@@ -44,6 +45,16 @@ namespace PageObjectModel.Pages
             var textToValidate = Driver.PageSource.Contains(expectedText);
             Assert.IsTrue(textToValidate, ":: This is not the expected text");
             Console.WriteLine(":: The text {} is in the PageSource" + expectedText);
+        }
+
+        public void ValidateMultipleTextInPageSource(Table table)
+        {
+            foreach (var row in table.Rows)
+            {
+                var textToValidate = row["expectedText"];
+                Assert.IsTrue(Driver.PageSource.Contains(textToValidate), "This is not the expected text!");
+                Console.WriteLine(":: The text {0} is in the PageSource", textToValidate);
+            }
         }
 
 

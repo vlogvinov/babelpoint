@@ -113,6 +113,34 @@ this.ScenarioSetup(scenarioInfo);
 #line hidden
             this.ScenarioCleanup();
         }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("Validate existence of multiple texts in PageSource")]
+        [NUnit.Framework.CategoryAttribute("Debug")]
+        public virtual void ValidateExistenceOfMultipleTextsInPageSource()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Validate existence of multiple texts in PageSource", new string[] {
+                        "Debug"});
+#line 21
+this.ScenarioSetup(scenarioInfo);
+#line 22
+ testRunner.Given("I navigate to the homepage", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line hidden
+            TechTalk.SpecFlow.Table table1 = new TechTalk.SpecFlow.Table(new string[] {
+                        "expectedText"});
+            table1.AddRow(new string[] {
+                        "The Free Encyclopedia"});
+            table1.AddRow(new string[] {
+                        "Deutsch"});
+            table1.AddRow(new string[] {
+                        "Русский"});
+            table1.AddRow(new string[] {
+                        "日本語"});
+#line 23
+ testRunner.Then("I see", ((string)(null)), table1, "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
     }
 }
 #pragma warning restore

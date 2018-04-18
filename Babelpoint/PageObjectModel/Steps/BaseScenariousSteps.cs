@@ -36,6 +36,14 @@ namespace PageObjectModel.Steps
             InstanceOf<BasePage>().ValidateTextInPageSource(expectedText);
         }
 
+        [Then(@"I see")]
+        public void ThenISee(Table table)
+        {
+            InstanceOf<BasePage>().ValidateMultipleTextInPageSource(table);
+        }
+
+
+
 
 
 
