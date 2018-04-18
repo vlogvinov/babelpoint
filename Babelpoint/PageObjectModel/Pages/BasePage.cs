@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using PageObjectModel.Utils.Selenium;
 
 namespace PageObjectModel.Pages
 {
@@ -15,9 +16,9 @@ namespace PageObjectModel.Pages
 
         public void AccessMainEnterPoint()
         {
-            const string url = "https://www.wikipedia.org/";
-            Browser().Navigate().GoToUrl(url);
-           
+            Browser().Navigate().GoToUrl(Settings.BaseUrl);
+            Browser().Manage().Window.Maximize();
+            Console.WriteLine(Settings.WelcomeMessage);
         }
 
     }
