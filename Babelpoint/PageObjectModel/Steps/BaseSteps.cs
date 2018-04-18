@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PageObjectModel.Pages;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace PageObjectModel.Steps
 {
-    class BaseSteps
+    public class BaseSteps : Page
     {
     }
 }
