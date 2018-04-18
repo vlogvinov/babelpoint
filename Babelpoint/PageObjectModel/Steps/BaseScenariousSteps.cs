@@ -18,5 +18,12 @@ namespace PageObjectModel.Steps
             InstanceOf<BasePage>().AccessMainEnterPoint();
         }
 
+        [Then(@"I see the page title contains ""(.*)""")]
+        public void ThenISeeThePageTitleContains(string expectedTitle)
+        {
+            InstanceOf<BasePage>().ValidatePageTitle(expectedTitle);
+        }
+
+
     }
 }

@@ -1,11 +1,7 @@
 ﻿Feature: BaseScenarious
-	In order to avoid silly mistakes
-	As a math idiot
-	I want to be told the sum of two numbers
+	These scenarious can be used in any project
 
-@mytag
-Scenario: Add two numbers
-	Given I have entered 50 into the calculator
-	And I have entered 70 into the calculator
-	When I press add
-	Then the result should be 120 on the screen
+@Debug
+Scenario: Validate the title of a website
+	Given I navigate to the homepage
+	Then I see the page title contains "Wikipedia"
